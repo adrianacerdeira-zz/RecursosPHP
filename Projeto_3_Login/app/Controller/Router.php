@@ -11,8 +11,11 @@ class Router
         'home' => 'HomeController',
         '404' => 'ErrorController'
 
+
     ];
     public $controller;
+
+
 
     public function __construct()
     {

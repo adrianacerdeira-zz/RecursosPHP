@@ -8,6 +8,16 @@
     ?>">
     <?php if(isset($controller->nome_erro)){echo $controller->nome_erro; } ?>
     <br>
+    <br>
+    <label for="usuario">Usuário</label>
+    <br>
+    <input type="text" id="usuario" name="usuario" value="<?php
+    if(isset($_POST['usuario'])){
+        echo $_POST['usuario'];
+    }
+    ?>">
+    <?php if(isset($controller->usuario_erro)){echo $controller->usuario_erro; } ?>
+    <br>
     <label for="cpf">CPF</label>
     <br>
     <input type="text" id="cpf" name="cpf" value="<?php

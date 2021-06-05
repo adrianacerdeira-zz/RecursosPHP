@@ -37,8 +37,9 @@ class Clientes extends DBConnect
      */
     protected function readOne($id)
     {
-        $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE id LIKE " . $id;
+        $sql = "SELECT * FROM " . self::TABLE_NAME . " WHERE id LIKE :id";
         $declaracao = $this->db->prepare($sql);
+        $declaracao->bindParam(':id', $id, PDO::PARAM_INT);
         $declaracao->execute();
         return $declaracao->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,8 +47,8 @@ class Clientes extends DBConnect
 
     protected function create()
     {
-        $created_at = time();
-        $sql = "INSERT INTO " . self::TABLE_NAME . " (nome, cpf, email, endereco, created_at) VALUES (:nome, :cpf, :email, :endereco, :created_at)";
+        $created_at = (string) time();
+        $sql = "INSERT INTO " . self::TABLE_NAME . " (nome, cpf, email, endereco, usuario, created_at, updated_at) VALUES (:nome, :cpf, :email, :endereco, :usuario, :created_at, :updated_at)";
         //Preparando a declaração
         $declaracao = $this->db->prepare($sql);
 
@@ -56,7 +57,9 @@ class Clientes extends DBConnect
         $declaracao->bindValue(':cpf', $this->form_cpf, PDO::PARAM_STR);
         $declaracao->bindValue(':email', $this->form_email, PDO::PARAM_STR);
         $declaracao->bindValue(':endereco', $this->form_endereco, PDO::PARAM_STR);
+        $declaracao->bindValue(':usuario', $this->form_usuario, PDO::PARAM_STR);
         $declaracao->bindValue(':created_at', $created_at, PDO::PARAM_STR);
+        $declaracao->bindValue(':updated_at', $created_at, PDO::PARAM_STR);
 
         //Executando
         $declaracao->execute();
@@ -157,7 +160,7 @@ class Clientes extends DBConnect
 //Verificando se o cpf foi fornecido e se são 11 dígitos de 0-9.
         $regEx = '/^[0-9]+$/'; //Expressão regular para verificar se são só números
         if (strlen($cpf_fornecido) !== 11 || !preg_match($regEx, $cpf_fornecido)) {
-            $this->cpf_invalido = '<br><span class="erro_form">Este CPF é invalido</span>';
+            $this->cpf_invalido = '<br><span class="erro_form">Este CPF é inválido</span>';
             return false;
         }
 
@@ -242,7 +245,7 @@ class Clientes extends DBConnect
         unset($_POST['submit']);
         foreach ($_POST as $key => $value) {
             $nome_var = 'form_' . $key;
-            $this->$nome_var = sanitize($value);
+            $this->$nome_var = $this->sanitize($value);
         }
 
     }
@@ -256,7 +259,7 @@ class Clientes extends DBConnect
 
         foreach ($dados as $key => $value) {
             $nome_var = 'db_' . $key;
-            $this->$nome_var = sanitize($value);
+            $this->$nome_var = $this->sanitize($value);
         }
 
     }

@@ -25,7 +25,26 @@
             <?php echo $dado['email']; ?>
         </td>
         <td>
-            <?php echo $dado['cpf']; ?>
+            <?php
+
+            $i = 0;
+            $limite = 3;
+            $cpf = "";
+            for($a = 0; $a < 3; $a++) {
+                if($a != 0){
+                    $cpf .= ".";
+                }
+                for (; $i < $limite; $i++) {
+                    $cpf .= $dado['cpf'][$i];
+                }
+
+                $limite +=3;
+            }
+            $cpf .= "-". $dado['cpf'][9] . $dado['cpf'][10];
+
+            echo $cpf;
+
+            ?>
         </td>
         <td>
             <?php echo $dado['endereco']; ?>

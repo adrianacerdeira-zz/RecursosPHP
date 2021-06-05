@@ -31,9 +31,7 @@
     <div class="clear_float"></div>
 
 </header>
-<div class="clientes"><a href="index.php" target="_blank">Lista de Clientes</a> </div>
 
-<main id="main">
 
 
 

@@ -183,3 +183,11 @@ button.clientes{
     margin-right: auto;
 
 }
+.logout{
+    float:right;
+    padding:1em; ;
+}
+.lista_clientes{
+    float:left;
+    padding: 1em;
+}
