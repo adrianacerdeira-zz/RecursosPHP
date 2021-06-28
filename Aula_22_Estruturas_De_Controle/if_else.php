@@ -58,5 +58,5 @@ $meu_numero = 11;
 
 
 <?php
-include '../todos/footer.php'; 
+include '../todos/footer.php';
 ?>

@@ -1,5 +1,6 @@
 <?php
 include 'Model/ProcessarFormCarro.php';
+
 /**
  * Created by PhpStorm.
  * User: AdrianaL
@@ -15,7 +16,7 @@ class CarroController
 //TODO: pegar processar form
     function __construct()
     {
-        if(isset($_POST['submit'])){
+        if (isset($_POST['submit'])) {
             $this->form = new ProcessarFormCarro();
             $this->page = 'View/mostrar_carros.php';
         } else {

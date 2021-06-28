@@ -8,7 +8,6 @@ include 'sub-namespaces/subnamespace2.php';
 //se eu estabelecer o Namespace que uso posso chamar diretamente a classe ou constante
 
 
-
 //\Primeiro\mostrar();
 //\Segundo\mostrar();
 
@@ -25,9 +24,6 @@ include 'sub-namespaces/subnamespace2.php';
 \App\NoMesmoArquivo\exibir();
 \App\OutroArquivo\exibir();
 \App\OutroArquivo\MaisDentroAinda\exibir();
-
-
-
 
 
 include '../todos/footer.php';

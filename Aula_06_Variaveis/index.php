@@ -129,14 +129,9 @@ echo '<br>', __FILE__;
 echo '<br>', __DIR__;
 
 
-
-
-
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

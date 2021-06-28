@@ -22,9 +22,10 @@ class ProcessarFormCarro
         $this->processarForm();
     }
 
-    private function processarForm(){
-        if(isset($_POST['submit'])){
-            //display_info($_POST, 'Do meu GET');
+    private function processarForm()
+    {
+        if (isset($_POST['submit'])) {
+            //display_info($_POST, 'Do meu POST');
             $this->modelo = $this->sanitize($_POST['modelo']);
             $this->ano = $this->sanitize($_POST['ano']);
             $this->cor = $this->sanitize($_POST['cor']);
@@ -38,8 +39,8 @@ class ProcessarFormCarro
     /**
      * Função para limpar input de html ou SQL malicioso
      */
-    private function sanitize($string) {
-
+    private function sanitize($string)
+    {
 
 
         $string_limpo_1 = filter_var($string, FILTER_SANITIZE_STRING);

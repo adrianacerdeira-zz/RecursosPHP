@@ -4,7 +4,7 @@ include '../todos/header.php';
 
 $a = 2;
 $b = 4;
-$c = '2';
+$c = '2';s
 ?>
 
 <table class="tipos">
@@ -36,24 +36,24 @@ $c = '2';
         <td><?php var_dump($a !== $c); ?></td>
     </tr>
     <tr>
-        <td>Menor que < </td>
+        <td>Menor que <</td>
         <td><?php echo $a < $b; ?></td>
         <td><?php var_dump($a < $b); ?></td>
     </tr>
 
     <tr>
-        <td>Maior que > </td>
+        <td>Maior que ></td>
         <td><?php echo $a > $b; ?></td>
         <td><?php var_dump($a > $b); ?></td>
     </tr>
     <tr>
-        <td>Menor ou igual que <= </td>
+        <td>Menor ou igual que <=</td>
         <td><?php echo $a <= $b; ?></td>
         <td><?php var_dump($a <= $b); ?></td>
     </tr>
 
     <tr>
-        <td>Maior ou igual que <= </td>
+        <td>Maior ou igual que <=</td>
         <td><?php echo $a >= $c; ?></td>
         <td><?php var_dump($a >= $c); ?></td>
     </tr>
@@ -74,7 +74,7 @@ $c = '2';
             var_dump(2 <=> 1);
 
 
-             ?></td>
+            ?></td>
     </tr>
     <tr>
         <td>Ternário ?</td>
@@ -88,6 +88,6 @@ $c = '2';
 </table>
 
 
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

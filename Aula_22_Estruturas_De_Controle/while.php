@@ -3,32 +3,30 @@ include '../todos/functions.php';
 include '../todos/header.php';
 
 $i = 0;
-while($i < 10){
+while ($i < 10) {
     echo $i . '<br>';
     $i++;
 }
 
 ////Sintaxe alternativa
-while($i < 20):
+while ($i < 20):
     echo $i . '<br>';
     $i++;
 endwhile;
 
 $expressao = false;
-do{
+do {
     echo 'Eu rodei<br>';
-} while($expressao);
+} while ($expressao);
 
-do{
+do {
     echo $i . '<br>';
     $i++;
-} while($i < 10);
+} while ($i < 10);
 
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

@@ -17,12 +17,9 @@ echo "<br> User Agent: " . $_SERVER['HTTP_USER_AGENT'];
 echo "<br> User IP: " . $_SERVER['REMOTE_ADDR'];
 
 
-
 //Verificando se existe o contador e se existir somar 1 e se não setar para 1
 $_SESSION['contador'] = $_SESSION['contador'] ? $_SESSION['contador'] + 1 : 1;
 echo '<br>Contador: ' . $_SESSION['contador'];
-
-
 
 
 ?>

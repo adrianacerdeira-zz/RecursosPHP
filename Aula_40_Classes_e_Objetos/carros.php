@@ -9,8 +9,6 @@ include $carro_view->page;
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

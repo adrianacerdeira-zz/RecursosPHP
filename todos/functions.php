@@ -11,8 +11,9 @@
  * @param $nome
  * @return string
  */
-function documentacao($nome){
-    return $nome.' essa é a documentação';
+function documentacao($nome)
+{
+    return $nome . ' essa é a documentação';
 }
 
 /**

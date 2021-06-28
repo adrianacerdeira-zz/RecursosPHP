@@ -9,10 +9,10 @@ const DB_USER = 'root';
 const DB_PASS = 'root';
 const HOST = 'localhost';
 const DB_TIPO = 'mysql';
-const TABLE_NAME =  'carros';
+const TABLE_NAME = 'carros';
 
 
-$caminho = DB_TIPO . ':host=' . HOST  . ';dbname=' . DB_NAME;
+$caminho = DB_TIPO . ':host=' . HOST . ';dbname=' . DB_NAME;
 // $caminho = 'mysql:host=localhost;dbname=carros';
 
 $conexao = new PDO($caminho, DB_USER, DB_PASS);
@@ -34,9 +34,9 @@ try {
     $declaracao->bindColumn('valor', $valor);
 //Pegando os dados
     //Neste caso, como dei bind das colunas uso o estilo PDO::FETCH_BOUND
-$dados = $declaracao->fetch(PDO::FETCH_BOUND);
+    $dados = $declaracao->fetch(PDO::FETCH_BOUND);
 
-echo "<br>Meu nome é $proprietario e meu carro é um: $marca $modelo, do ano $ano, que custa R$$valor";
+    echo "<br>Meu nome é $proprietario e meu carro é um: $marca $modelo, do ano $ano, que custa R$$valor";
 
 
 //Exemplo do bind_param sendo reusado
@@ -50,7 +50,7 @@ echo "<br>Meu nome é $proprietario e meu carro é um: $marca $modelo, do ano $a
 
     echo "<br>Meu for loop<br>";
 
-    for($id=1; $id < 4; $id+=2){
+    for ($id = 1; $id < 4; $id += 2) {
         $declaracao->execute();
         $dados = $declaracao->fetch(PDO::FETCH_BOUND);
 
@@ -59,12 +59,9 @@ echo "<br>Meu nome é $proprietario e meu carro é um: $marca $modelo, do ano $a
     }
 
 
-} catch (PDOException $erro){
+} catch (PDOException $erro) {
     echo "Oops deu o erro: " . $erro->getMessage();
 }
-
-
-
 
 
 include '../todos/footer.php';

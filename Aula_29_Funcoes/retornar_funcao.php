@@ -28,7 +28,6 @@ include '../todos/header.php';
 // retornando_func_com_param()('Adriana');
 
 
-
 // function retornando_func_com_param($nome){
 //    return function($nome){
 //        echo "Sou função retornada $nome <br>";
@@ -64,25 +63,26 @@ include '../todos/header.php';
 // $familia('Paula');
 
 //Exemplo de separação do algorítimo para otimizar processo
-function familiar($sobrenome, $idade){
-   if($idade > 20){
-       $status = 'Progenitor';
-   } else {
-       $status = 'Prole';
-   }
-   return function($nome) use($sobrenome, $status){
-       echo "Sou $status e meu nome é $nome $sobrenome <br>";
-   };
+function familiar($sobrenome, $idade)
+{
+    if ($idade > 20) {
+        $status = 'Progenitor';
+    } else {
+        $status = 'Prole';
+    }
+    return function ($nome) use ($sobrenome, $status) {
+        echo "Sou $status e meu nome é $nome $sobrenome <br>";
+    };
 
 }
+
 $idade = 25;
 $sobrenome = 'Cerdeira';
 $array_familia = ['Max', 'Juliana', 'Marcos'];
 $familia = familiar($sobrenome, $idade);
-foreach ($array_familia as $familiar){
-   $familia($familiar);
+foreach ($array_familia as $familiar) {
+    $familia($familiar);
 }
-
 
 
 include '../todos/footer.php';

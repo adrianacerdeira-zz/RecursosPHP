@@ -30,6 +30,6 @@ include '../todos/header.php';
 </table>
 
 
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

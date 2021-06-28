@@ -11,7 +11,7 @@ include 'teste/novo.php';
 <?= 'Nova tag'; ?>
 
 <p>
-    <?php echo $minha_primeira_variavel . 2 ; ?>
+    <?php echo $minha_primeira_variavel . 2; ?>
 </p>
 <p>
     <?php echo $minha_primeira_variavel . ' sou ' . $nome; ?>

@@ -156,38 +156,46 @@ td {
     border-right: 1px solid black;
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
     backgound-color: antiquewhite;
 }
-button{
-    margin:0.5em;
-    float:right;
+
+button {
+    margin: 0.5em;
+    float: right;
 }
-.btn.btn-success a{
+
+.btn.btn-success a {
     color: #FFFFFF;
 }
-.erro_form{
+
+.erro_form {
     color: #FF0000;
     font-weight: bold;
 }
-input{
-    width:80%;
+
+input {
+    width: 80%;
 }
-button.voltar_pra_clientes{
-    width:80%;
-    float:left;
+
+button.voltar_pra_clientes {
+    width: 80%;
+    float: left;
 }
-button.clientes{
-    width:90%;
+
+button.clientes {
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 
 }
-.logout{
-    float:right;
-    padding:1em; ;
+
+.logout {
+    float: right;
+    padding: 1em;;
 }
-.lista_clientes{
-    float:left;
+
+.lista_clientes {
+    float: left;
     padding: 1em;
 }

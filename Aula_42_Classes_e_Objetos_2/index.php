@@ -12,8 +12,6 @@ $db = new DBController();
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

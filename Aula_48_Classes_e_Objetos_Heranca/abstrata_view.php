@@ -4,7 +4,6 @@ include '../todos/header.php';
 include 'abstrata.php';
 
 
-
 $obj = new Concreta();
 $obj->mostrar();
 $obj->semCorpo();

@@ -12,10 +12,10 @@ echo 'Este aqui não vai rodar<br>';
 novo:
 echo 'Voltei<br>';
 
-for($i = 0; $i < 100; $i++){
-    $aleatorio = rand(1,50);
+for ($i = 0; $i < 100; $i++) {
+    $aleatorio = rand(1, 50);
     echo $i . ':<br>';
-    if($aleatorio === 20){
+    if ($aleatorio === 20) {
         goto ganhei;
     }
 }
@@ -25,8 +25,6 @@ echo 'Consegui o 20';
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

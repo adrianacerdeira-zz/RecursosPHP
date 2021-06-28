@@ -24,7 +24,8 @@ include '../todos/header.php';
 
 //Union Types
 //
-class MinhaClasse{
+class MinhaClasse
+{
     public int|float $meuNumero;
 
 
@@ -33,10 +34,11 @@ class MinhaClasse{
         $this->meuNumero = $numero;
     }
 
-    public function multiplicarNumero() : int|float{
+public
+function multiplicarNumero(): int|float{
 
-        return $this->meuNumero * 2;
-    }
+    return $this->meuNumero * 2;
+}
 
 
 

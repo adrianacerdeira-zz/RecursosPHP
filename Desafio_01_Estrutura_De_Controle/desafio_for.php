@@ -13,8 +13,8 @@ $arr = [
 //    echo '<br>';
 //
 //}
-foreach($arr as $arr_interno){
-    foreach ($arr_interno as $valor){
+foreach ($arr as $arr_interno) {
+    foreach ($arr_interno as $valor) {
         echo $valor;
     }
     echo "<br>";

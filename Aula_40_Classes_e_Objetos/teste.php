@@ -5,8 +5,8 @@ include 'Model/Carro.php';
 
 class Prop{
 
-    public function __construct(private $nome){
-        $this->nome = $nome;
+    public function __construct(private $bananinha){
+        $this->nome = $bananinha;
     }
 
 
@@ -16,7 +16,7 @@ class Prop{
 }
 
 $propriedade = new Prop('Adriana');
-//echo $propriedade->nome;
+echo $propriedade->nome;
 display_info($propriedade, "Objeto");
 $propriedade->ola();
 

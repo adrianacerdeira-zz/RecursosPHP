@@ -1,4 +1,4 @@
- <?php
+<?php
 include '../todos/functions.php';
 include '../todos/header.php';
 
@@ -72,6 +72,6 @@ $d = false;
 </table>
 
 
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

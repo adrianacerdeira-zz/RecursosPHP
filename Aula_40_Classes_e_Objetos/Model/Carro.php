@@ -41,7 +41,6 @@ class Carro
         $this->marca = $marca;
 
 
-
     }
 
     function teste()
@@ -67,8 +66,6 @@ class Carro
         //A diferenção entre uma propriedade que é criada em um método e uma propriedade que já é definida a nível de classe é que sempre que a classe for instanciada em um objeto, as propriedades definidas a nível de classe vão ser criadas, existirão mesmo que o estejam vazias, já as criadas dentro de métodos só serão criadas quando o métdodo for chamado.
         $this->fuiCriadoAquiDentro = 'Para mostrar que só é criado quando método for chamado';
     }
-
-
 
 
     /**
@@ -113,9 +110,10 @@ class Carro
         self::souPrivada();
     }
 
-    static function mistura2($objeto){
+    static function mistura2($objeto)
+    {
         $objeto->teste();
-}
+    }
 }
 
 

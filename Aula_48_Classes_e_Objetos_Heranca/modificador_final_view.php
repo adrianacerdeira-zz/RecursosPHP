@@ -9,5 +9,4 @@ $obj = new Filha();
 //$obj2->estePode();
 
 
-
 include '../todos/footer.php';

@@ -27,9 +27,9 @@
         </td>
         <td>
             R$ <?php echo $carro_view->form->valor;
-//            if((int) $carro_view->form->valor === 20000){
-//                echo 'Que preço bom';
-//            }
+            //            if((int) $carro_view->form->valor === 20000){
+            //                echo 'Que preço bom';
+            //            }
             ?>
         </td>
     </tr>

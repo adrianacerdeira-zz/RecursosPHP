@@ -3,10 +3,10 @@ include '../todos/functions.php';
 include '../todos/header.php';
 
 
-$meu_arr = [1,2,3,4];
+$meu_arr = [1, 2, 3, 4];
 
-$par_ou_impar = function ($elemento){
-    if($elemento%2 === 0){
+$par_ou_impar = function ($elemento) {
+    if ($elemento % 2 === 0) {
         return 'Par';
     } else {
         return 'Impar';
@@ -25,8 +25,8 @@ print_r($meu_novo_arr);
 //print_r($meu_novo_arr);
 
 //Filter
-$par = function ($elemento){
-    if($elemento%2 === 0){
+$par = function ($elemento) {
+    if ($elemento % 2 === 0) {
         return true;
     } else {
         return false;
@@ -38,13 +38,13 @@ print_r($meu_novo_arr);
 
 //Equivale a:
 $meu_novo_arr = [];
-foreach ($meu_arr as $elemento){
-    if($par($elemento)){
+foreach ($meu_arr as $elemento) {
+    if ($par($elemento)) {
         array_push($meu_novo_arr, $elemento);
     }
 }
 //print_r($meu_novo_arr);
 
 
-    include '../todos/footer.php';
+include '../todos/footer.php';
 ?>

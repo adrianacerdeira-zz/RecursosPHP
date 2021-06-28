@@ -4,11 +4,11 @@ include '../todos/header.php';
 
 $soma = 2 + 2;
 $subtracao = 3 - 2;
-$multiplicacao = 3*2;
-$divisao = 3/2;
+$multiplicacao = 3 * 2;
+$divisao = 3 / 2;
 $identidade = '-10';
-$modulo = 10%3;
-$exponencial = 2**3;
+$modulo = 10 % 3;
+$exponencial = 2 ** 3;
 ?>
 
 <table class="tipos">
@@ -62,6 +62,6 @@ $exponencial = 2**3;
 </table>
 
 
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

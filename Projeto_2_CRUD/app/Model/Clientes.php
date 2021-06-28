@@ -47,7 +47,7 @@ class Clientes extends DBConnect
 
     protected function create()
     {
-        $created_at = (string) time();
+        $created_at = (string)time();
         $sql = "INSERT INTO " . self::TABLE_NAME . " (nome, cpf, email, endereco, usuario, created_at, updated_at) VALUES (:nome, :cpf, :email, :endereco, :usuario, :created_at, :updated_at)";
         //Preparando a declaração
         $declaracao = $this->db->prepare($sql);
@@ -140,7 +140,7 @@ class Clientes extends DBConnect
         }
 
         //Outra maneira de ver se está vazio
-        if(!filter_input(INPUT_POST, $campo)){
+        if (!filter_input(INPUT_POST, $campo)) {
             $var = "{$campo}_erro";
             $this->$var = '<br><span class="erro_form">O campo ' . $campo . ' é obrigatório</span>';
             $valido = false;
@@ -226,7 +226,7 @@ class Clientes extends DBConnect
 
 
         //Validando o email
-        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $form_valido = false;
         }
         return $form_valido;
@@ -263,8 +263,6 @@ class Clientes extends DBConnect
         }
 
     }
-
-
 
 
 }

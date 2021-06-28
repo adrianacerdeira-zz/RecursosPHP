@@ -8,10 +8,10 @@ const DB_USER = 'root';
 const DB_PASS = 'root';
 const HOST = 'localhost';
 const DB_TIPO = 'mysql';
-const TABLE_NAME =  'carros';
+const TABLE_NAME = 'carros';
 
 
-$caminho = DB_TIPO . ':host=' . HOST  . ';dbname=' . DB_NAME;
+$caminho = DB_TIPO . ':host=' . HOST . ';dbname=' . DB_NAME;
 // $caminho = 'mysql:host=localhost;dbname=carros';
 
 $conexao = new PDO($caminho, DB_USER, DB_PASS);
@@ -46,12 +46,9 @@ try {
     display_info($dados, "Da DB");
 
 
-
-
-} catch (PDOException $erro){
+} catch (PDOException $erro) {
     echo "Oops deu o erro: " . $erro->getMessage();
 }
-
 
 
 include '../todos/footer.php';

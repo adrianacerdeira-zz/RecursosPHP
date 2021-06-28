@@ -7,6 +7,7 @@ class Pessoa
     private $nome;
     public $profissao;
     private $attrNaoDeclarados = [];
+
     /**
      * Método invocado quando o objeto é instanciado
      * Pessoa constructor.
@@ -96,6 +97,7 @@ class Pessoa
         echo "<br>A propriedade $name não é pública, você não pode acessá-la para ver se está declarada<br>";
         return true;
     }
+
     /**
      * Chamado ao tentar usar unset em uma propriedade privada ou protegida
      * @param $name
@@ -106,7 +108,7 @@ class Pessoa
         unset($this->$name);
     }
 
-  
+
     /**
      * Método que deve retornar um array e que será chamado em situações onde um debug é necessário
      * @return string[]
@@ -114,11 +116,10 @@ class Pessoa
     public function __debugInfo()
     {
 
-       // return ['Porque vc quer saber de mim?<br>'];
+        // return ['Porque vc quer saber de mim?<br>'];
         return ["primeiro" => 'Porque vc quer saber de mim?<br>', "segundo" => "Este é o segundo elemento"];
     }
 }
-
 
 
 ?>

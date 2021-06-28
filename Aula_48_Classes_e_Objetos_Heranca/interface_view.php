@@ -7,14 +7,4 @@ $teste = new Testando();
 $teste->apresentar();
 
 
-
-
-
-
-
-
-
-
-
-
 include '../todos/footer.php';

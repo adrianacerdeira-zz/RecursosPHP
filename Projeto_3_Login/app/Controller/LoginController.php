@@ -6,17 +6,16 @@ class LoginController extends Login
     public function __construct()
     {
         parent::__construct();
-        if(isset($_POST["submit"])){
-            if($this->validarCampos()) {
+        if (isset($_POST["submit"])) {
+            if ($this->validarCampos()) {
                 $this->atribuirDadosDeForm();
                 $valido = $this->estou_autorizado($this->form_usuario);
 
                 if ($valido) {
 
                     $this->logado = true;
-                    setcookie("usuario", $this->db_usuario, time() + (60*60*24*30));
+                    setcookie("usuario", $this->db_usuario, time() + (60 * 60 * 24 * 30));
                     $_SESSION["nome"] = $this->db_nome;
-
 
 
                 } else {
@@ -27,7 +26,7 @@ class LoginController extends Login
                 $this->logado = false;
             }
         } else {
-            if(isset($_COOKIE["usuario"]) && $_COOKIE["usuario"] != ''){
+            if (isset($_COOKIE["usuario"]) && $_COOKIE["usuario"] != '') {
                 //Considerar logado e buscar info
                 $dados = $this->readOneUser($this->sanitize($_COOKIE["usuario"]));
                 $this->atribuirDadosDeDB($dados[0]);

@@ -71,14 +71,9 @@ $idade = 20;
 //}
 
 
-
-
-
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

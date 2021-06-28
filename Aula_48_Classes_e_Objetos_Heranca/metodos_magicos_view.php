@@ -40,8 +40,6 @@ echo $adriana->primeiro;
 //
 
 
-
-
 //unset($adriana);
 
 

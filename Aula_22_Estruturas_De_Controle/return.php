@@ -10,8 +10,6 @@ echo 'Depois incluir meu arquivo<br>';
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

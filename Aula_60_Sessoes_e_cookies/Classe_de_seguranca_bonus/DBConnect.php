@@ -27,13 +27,11 @@ class Acesso extends DBConnect
 {
 
 
-
-
     public function __construct()
     {
         parent::__construct();
         $this->session_id_e_user_agent();
-        if($this->checarDB($this->nav_session_id)){
+        if ($this->checarDB($this->nav_session_id)) {
             $valido = $this->avaliandoAcesso();
         } else {
             $this->inserirPrimeiroAcesso();
@@ -60,16 +58,16 @@ class Acesso extends DBConnect
     {
 
 
-            if ($this->user_agent === $this->nav_user_agent) {
-                $this->updateDB();
-                echo '<br>Retorno<br>';
-                return true;
-            } else {
-                echo '<br>Acesso inválido<br>';
-                //Vou destruir a sessão
-                session_destroy();
-                return false;
-            }
+        if ($this->user_agent === $this->nav_user_agent) {
+            $this->updateDB();
+            echo '<br>Retorno<br>';
+            return true;
+        } else {
+            echo '<br>Acesso inválido<br>';
+            //Vou destruir a sessão
+            session_destroy();
+            return false;
+        }
 
     }
 
@@ -82,15 +80,15 @@ class Acesso extends DBConnect
     {
         //echo "<br>Session ID veio: $this->nav_session_id";
         $sql = "SELECT * FROM " . self::TABLE_NAME;
-       // echo "<br>$sql";
+        // echo "<br>$sql";
         $declaracao = $this->db->prepare($sql);
         $declaracao->execute();
         $dados = $declaracao->fetchAll();
 //        echo '<br>Os Dados<br><pre> ';
 //        var_dump($dados);
 //        echo '</pre>';
-        foreach ($dados as $dado){
-            if($this->nav_session_id == $dado['session_id']){
+        foreach ($dados as $dado) {
+            if ($this->nav_session_id == $dado['session_id']) {
                 $this->session_id = $dado['session_id'];
                 $this->contador = $dado['contador'];
                 $this->user_agent = $dado['user_agent'];
@@ -110,7 +108,7 @@ class Acesso extends DBConnect
 
         $sql = "INSERT INTO " . parent::TABLE_NAME . " (session_id, cpf, contador, user_agent) VALUES (:session_id, :contador, :user_agent)";
 
-    //    $sql = "INSERT INTO " . parent::TABLE_NAME . " (session_id, cpf, contador, user_agent) VALUES (" . $this->nav_session_id .", $contador, ".$this->nav_user_agent. ")";
+        //    $sql = "INSERT INTO " . parent::TABLE_NAME . " (session_id, cpf, contador, user_agent) VALUES (" . $this->nav_session_id .", $contador, ".$this->nav_user_agent. ")";
 
         //Preparando a declaração
         echo '<br>Declaração insert: ' . $sql;
@@ -177,10 +175,12 @@ class Acesso extends DBConnect
 
         }
     }
+
     /**
      * Obter o session id e o user agent
      */
-    private function session_id_e_user_agent(){
+    private function session_id_e_user_agent()
+    {
         $this->nav_session_id = session_id();
         $this->nav_user_agent = $_SERVER['HTTP_USER_AGENT'];
         echo "<br>O meu Session ID do navegador é $this->nav_session_id e o meu User Agent é $this->nav_user_agent<br>";

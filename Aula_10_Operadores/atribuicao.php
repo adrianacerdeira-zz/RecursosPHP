@@ -2,10 +2,9 @@
 include '../todos/functions.php';
 include '../todos/header.php';
 
-$atribuicao = 6/2;
+$atribuicao = 6 / 2;
 $a = ($b = 4) + 6;
 echo $a, '<br>', $b, '<br>';
-
 
 
 $a += $b; //Equivale a $a = $a + $b
@@ -31,6 +30,6 @@ echo $meu_string, '<br>';
 ?>
 
 
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

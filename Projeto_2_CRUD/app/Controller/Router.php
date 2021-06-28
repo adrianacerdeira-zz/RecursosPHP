@@ -15,7 +15,6 @@ class Router
     public $controller;
 
 
-
     public function __construct()
     {
         if (isset($_GET['page'])) {

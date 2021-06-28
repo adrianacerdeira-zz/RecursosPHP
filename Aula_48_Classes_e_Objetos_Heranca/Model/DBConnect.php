@@ -23,8 +23,8 @@ class DBConnect
     /**
      * Função para limpar input de html ou SQL malicioso
      */
-    protected function sanitize($string) {
-
+    protected function sanitize($string)
+    {
 
 
         $string_limpo_1 = filter_var($string, FILTER_SANITIZE_STRING);

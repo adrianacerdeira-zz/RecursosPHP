@@ -12,8 +12,9 @@ class CreateController extends Clientes
 
     }
 
-    private function processForm(){
-        if(isset($_POST['submit'])) {
+    private function processForm()
+    {
+        if (isset($_POST['submit'])) {
             $valido = $this->validarCampos();
 
             if ($valido) {
@@ -39,7 +40,9 @@ class CreateController extends Clientes
             return false;
         }
     }
-    private function updateDB(){
+
+    private function updateDB()
+    {
         return $this->create();
 
     }

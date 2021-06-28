@@ -47,7 +47,7 @@ class Clientes extends DBConnect
 
     protected function create()
     {
-        $created_at = (string) time();
+        $created_at = (string)time();
         $sql = "INSERT INTO " . self::TABLE_NAME . " (nome, cpf, email, endereco, usuario, created_at, updated_at) VALUES (:nome, :cpf, :email, :endereco, :usuario, :created_at, :updated_at)";
         //Preparando a declaração
         $declaracao = $this->db->prepare($sql);
@@ -128,7 +128,6 @@ class Clientes extends DBConnect
     }
 
 
-
     //Validação de CPF - Somente o cliente precisa dessa função, os administradores não tem campo CPF
     private function validarCPF($cpf_fornecido)
     {
@@ -206,7 +205,7 @@ class Clientes extends DBConnect
 
 
         //Validando o email
-        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $form_valido = false;
         }
         return $form_valido;
@@ -243,8 +242,6 @@ class Clientes extends DBConnect
         }
 
     }
-
-
 
 
 }

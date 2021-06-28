@@ -15,7 +15,7 @@ fwrite($arquivo, "Estou escrevendo a partir da primeira linha.\nE agora a segund
 $str = "Sou a terceira linha\n";
 fwrite($arquivo, $str);
 
-for($i = 1; $i < 5; $i++){
+for ($i = 1; $i < 5; $i++) {
     fwrite($arquivo, "Nova linha $i\n");
 }
 //

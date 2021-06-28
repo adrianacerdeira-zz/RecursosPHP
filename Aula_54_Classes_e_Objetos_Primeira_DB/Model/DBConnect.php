@@ -25,7 +25,7 @@ class DBConnect
     {
         //Primeiro argumento seria o caminho com o tipo de db, a fonte da base de dados (DNS) neste caso localhost e o nome da base de dados, o segundo argumento é o usuário e o terceiro a senha
         //O primeiro argumento do PDO é um string com o seguinte formato: 'mysql:host=localhost;dbname=test'
-       $caminho = DBConnect::DB_TIPO . ':host=' . DBConnect::HOST  . ';dbname=' . DBConnect::DB_NAME;
+        $caminho = DBConnect::DB_TIPO . ':host=' . DBConnect::HOST . ';dbname=' . DBConnect::DB_NAME;
         //$caminho = 'mysql:host=localhost;dbname=carros';
 
         $this->db = new PDO($caminho, DBConnect::DB_USER, DBConnect::DB_PASS);
@@ -38,8 +38,8 @@ class DBConnect
     /**
      * Função para limpar input de html ou SQL malicioso
      */
-    protected function sanitize($string) {
-
+    protected function sanitize($string)
+    {
 
 
         $string_limpo_1 = filter_var($string, FILTER_SANITIZE_STRING);

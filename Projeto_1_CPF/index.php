@@ -10,8 +10,8 @@ include 'function.php';
 //    include 'form.php';
 //}
 
-if(isset($_POST['submit'])){
-    if(!validar_cpf($_POST['cpf'])){
+if (isset($_POST['submit'])) {
+    if (!validar_cpf($_POST['cpf'])) {
         include 'form.php';
     }
 } else {
@@ -23,8 +23,6 @@ display_info($_POST, "Dados");
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

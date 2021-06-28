@@ -1,10 +1,13 @@
 <?php
+
 namespace Primeiro;
-function mostrar(){
+function mostrar()
+{
     echo '<br>Sou do diretório primeiro!<br>';
 }
 
-class Pessoa{
+class Pessoa
+{
     public function __construct($nome, $idade)
     {
         $this->nome = $nome;
@@ -18,7 +21,8 @@ class Pessoa{
 //echo \Primeiro\$variavel_dentro_do_name;
 
 //Está seria a função var_dump definida no namespace
-function var_dump($string){
+function var_dump($string)
+{
     echo "<br>Eu sou a função definida pelo namespace sendo chamada de: $string <br>";
 }
 //var_dump('Estou chamando do namespace sem a barra');

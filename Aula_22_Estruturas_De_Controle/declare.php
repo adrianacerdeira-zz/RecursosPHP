@@ -5,8 +5,6 @@ include '../todos/header.php';
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

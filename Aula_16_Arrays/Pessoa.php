@@ -24,10 +24,13 @@ class Pessoa
     }
 
 
-    public function display_info($var){
+    public function display_info($var)
+    {
         echo $var;
     }
-    private function calc_idade(){
+
+    private function calc_idade()
+    {
 
         $this->idade = $this->data - $this->ano_de_nascimento;
     }

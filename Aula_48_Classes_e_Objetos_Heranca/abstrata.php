@@ -33,7 +33,8 @@ abstract class Abstrata
 
 class Concreta extends Abstrata
 {
-    function mostrar(){
+    function mostrar()
+    {
         parent::mostrar();
         echo 'Sou do filho<br>';
     }

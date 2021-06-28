@@ -34,6 +34,5 @@ $a = 1;
 //echo 'Resultado decremento pré-retorno:', $a, '<br>';
 
 
-
-include '../todos/footer.php'; 
+include '../todos/footer.php';
 ?>

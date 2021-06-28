@@ -1,5 +1,6 @@
 <?php
 include 'Model/DBCRUD.php';
+
 /**
  * Created by PhpStorm.
  * User: AdrianaL
@@ -23,7 +24,6 @@ class DadosCarros
 
 
     }
-
 
 
 }

@@ -1,11 +1,14 @@
 <?php
+
 namespace App\OutroArquivo;
-function exibir(){
+function exibir()
+{
     echo "<br>Sou o sub-namespace em outro arquivo";
 }
 
 namespace App\OutroArquivo\MaisDentroAinda;
 
-function exibir(){
+function exibir()
+{
     echo "<br>Mais dentro ainda";
 }

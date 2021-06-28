@@ -1,11 +1,13 @@
 <?php
 
 
-trait validacao{
+trait validacao
+{
     public $id = "id";
 
-    private function cuidadosComDB($campo){
-        if(!isset($_POST[$campo]) || $_POST[$campo] === ''){
+    private function cuidadosComDB($campo)
+    {
+        if (!isset($_POST[$campo]) || $_POST[$campo] === '') {
             return false;
         }
     }
@@ -13,7 +15,8 @@ trait validacao{
     /**
      * Função para limpar input de html ou SQL malicioso
      */
-    protected function sanitize($string) {
+    protected function sanitize($string)
+    {
 
 
         $string_limpo_1 = filter_var($string, FILTER_SANITIZE_STRING);
@@ -24,65 +27,84 @@ trait validacao{
         return $string_limpo_final;
     }
 
-    public function teste($string){
+    public function teste($string)
+    {
         echo $this->sanitize($string), '<br>';
-}
+    }
 
 
 }
 
-class Cliente{
+class Cliente
+{
     use validacao;
 }
 
-class Sapato{
+class Sapato
+{
     use validacao;
 }
-
-
 
 
 //Exemplo de trait com mesmo método que a classe pai
-class Usuario{
-    private function sanitize($string){
+class Usuario
+{
+    private function sanitize($string)
+    {
         return 'Sou o sanitize do pai<br>';
     }
-    public function teste($string){
+
+    public function teste($string)
+    {
         echo "Sou teste do pai", '<br>';
     }
 }
 
-class Cliente2 extends Usuario {
+class Cliente2 extends Usuario
+{
     use validacao;
-
 }
 
 //exemplo de traits com métodos ou atributos iguais
 
-trait primeiro{
-    public function vouSerIgualNosDois1(){
+trait primeiro
+{
+    public function vouSerIgualNosDois1()
+    {
         echo 'Sou do primeiro trait função 1<br>';
     }
-    public function vouSerIgualNosDois2(){
+
+    public function vouSerIgualNosDois2()
+    {
         echo 'Sou do primeiro trait  função 2<br>';
     }
-    public function soNoPrimeiro(){
+
+    public function soNoPrimeiro()
+    {
         echo 'Estou só no primeiro trait<br>';
     }
 }
-trait segundo{
-    public function vouSerIgualNosDois1(){
+
+trait segundo
+{
+    public function vouSerIgualNosDois1()
+    {
         echo 'Sou do segundo trait função 1<br>';
     }
-    public function vouSerIgualNosDois2(){
+
+    public function vouSerIgualNosDois2()
+    {
         echo 'Sou do segundo trait  função 2<br>';
     }
-    public function soNoSegundo(){
+
+    public function soNoSegundo()
+    {
         echo 'Estou só no segundo trait<br>';
     }
 }
 
-class TesteConflito{
+class TesteConflito
+{
 //    use primeiro, segundo;//Deste modo vai dar conflito
     use primeiro, segundo {
         primeiro::vouSerIgualNosDois1 insteadof segundo;
@@ -90,16 +112,10 @@ class TesteConflito{
         segundo::vouSerIgualNosDois2 insteadof primeiro;
 
         //Vou dar um alias
-       segundo::vouSerIgualNosDois1 as dandoAlias;
+        segundo::vouSerIgualNosDois1 as dandoAlias;
 
     }
 }
-
-
-
-
-
-
 
 
 ?>

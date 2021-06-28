@@ -13,7 +13,6 @@ class DBConnect
     public const DB_NAME = 'carros';
     public const DB_USER = 'root';
     public const DB_PASS = 'root';
-    
 
 
     function __construct()

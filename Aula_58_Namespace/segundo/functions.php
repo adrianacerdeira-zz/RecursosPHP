@@ -1,5 +1,7 @@
 <?php
+
 namespace Segundo;
-function mostrar(){
+function mostrar()
+{
     echo '<br>Sou do diretório segundo!<br>';
 }

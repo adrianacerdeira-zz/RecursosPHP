@@ -11,8 +11,9 @@
  * @param $nome
  * @return string
  */
-function documentacao($nome){
-    return $nome.' essa é a documentação';
+function documentacao($nome)
+{
+    return $nome . ' essa é a documentação';
 }
 
 /**
@@ -41,11 +42,12 @@ function myDebug($info)
     var_dump($info);
     echo '</pre>';
 }
+
 /**
  * Função para limpar input de html ou SQL malicioso
  */
-function sanitize($string) {
-
+function sanitize($string)
+{
 
 
     $string_limpo_1 = filter_var($string, FILTER_SANITIZE_STRING);

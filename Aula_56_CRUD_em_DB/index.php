@@ -38,14 +38,5 @@ $sqlAtualizarRegistro = "UPDATE minha_primeira_tabela SET nome='Adriana Laura', 
 $sqlApagarRegistro = "DELETE FROM minha_primeira_tabela WHERE id=2";
 
 
-
-
-
-
-
-
-
-
-
 include '../todos/footer.php';
 ?>

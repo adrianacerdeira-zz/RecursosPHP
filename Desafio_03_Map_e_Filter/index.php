@@ -17,44 +17,44 @@ $maiores_de_idade = array_filter($idades, fn($elemento) => $elemento >= 18);
 $anos_pra_aposentar = array_map(fn($elemento) => 60 - $elemento, $maiores_de_idade);
 //print_r($anos_pra_aposentar);
 ?>
-<table>
-    <thead>
-    <th>Nome</th>
-    <th>Idade</th>
-    <th>Quantos anos para aposentar</th>
-    </thead>
-    <tbody>
+    <table>
+        <thead>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Quantos anos para aposentar</th>
+        </thead>
+        <tbody>
 
-    <?php
-
-    foreach ($maiores_de_idade
-
-             as $chave => $valor) {
-        ?>
-        <tr>
-            <td>
-                <?php
-                echo $chave;
-                ?>
-            </td>
-            <td>
-                <?php
-                echo $valor;
-                ?>
-            </td>
-            <td>
-                <?php
-                echo $anos_pra_aposentar[$chave];
-                ?>
-            </td>
-
-
-        </tr>
         <?php
-    }
-    ?>
-    </tbody>
-</table>
+
+        foreach ($maiores_de_idade
+
+                 as $chave => $valor) {
+            ?>
+            <tr>
+                <td>
+                    <?php
+                    echo $chave;
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $valor;
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    echo $anos_pra_aposentar[$chave];
+                    ?>
+                </td>
+
+
+            </tr>
+            <?php
+        }
+        ?>
+        </tbody>
+    </table>
 
 <?php
 include '../todos/footer.php';

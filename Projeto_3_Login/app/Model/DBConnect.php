@@ -56,18 +56,21 @@ class DBConnect
      *Essa função vai fazer parte da encriptação da senha, a parte que precisa ser reproduzida ao testar a senha fornecida com o token da db
      **/
 
-    protected function encriptar_senha($token, $pass){
+    protected function encriptar_senha($token, $pass)
+    {
 
-        $hash_extra = $token + (60*60*10*5);//Isto aumenta o meu hash e dificulta descobrir ele pois este pedaço não é guardado na db mas no código
-        $salty = dechex($hash_extra).$pass;
+        $hash_extra = $token + (60 * 60 * 10 * 5);//Isto aumenta o meu hash e dificulta descobrir ele pois este pedaço não é guardado na db mas no código
+        $salty = dechex($hash_extra) . $pass;
         $senha_ecriptada = hash('sha1', $salty);
         return $senha_ecriptada;
 
     }
+
     /**
      *Essa função vai encriptar a sua senha com o mesmo
      **/
-    protected function encriptar_senha_para_db(){
+    protected function encriptar_senha_para_db()
+    {
         //Vamos criar um hash
         date_default_timezone_set('US/Eastern'); //mudar o fuso dificulta a possibilidade de achar seu hash
         $this->token = time(); //Isto deve ser guardado no token que vai para a base de dados.
@@ -78,7 +81,6 @@ class DBConnect
         return $this->senha_encriptada;
 
     }
-
 
 
     //Métodos de validação
@@ -94,7 +96,7 @@ class DBConnect
         }
 
         //Outra maneira de ver se está vazio
-        if(!filter_input(INPUT_POST, $campo)){
+        if (!filter_input(INPUT_POST, $campo)) {
             $var = "{$campo}_erro";
             $this->$var = '<br><span class="erro_form">O campo ' . $campo . ' é obrigatório</span>';
             $valido = false;

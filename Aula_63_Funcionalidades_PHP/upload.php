@@ -23,11 +23,11 @@ if (isset($_FILES["arquivo"])) {
     if ($arquivo_valido) {
         //$nome_arquivo = $_FILES["arquivo"]["name"];
         $ext = substr($_FILES["arquivo"]["name"], -4);
-        $nome_arquivo = time().$ext;
+        $nome_arquivo = time() . $ext;
         //Criando o caminho completo do arquivo
         $caminho_completo = $pasta_upload . $nome_arquivo;
         $temporario = $_FILES["arquivo"]["tmp_name"];
-        if(move_uploaded_file($temporario, $caminho_completo)){
+        if (move_uploaded_file($temporario, $caminho_completo)) {
             echo 'Parabéns, você carregou seu arquivo!';
         } else {
             echo 'Oops, deu erro.';
@@ -47,21 +47,19 @@ if (isset($_FILES["arquivo"])) {
 
     <div id="imagens">
 
-<?php
-$arquivos = scandir($pasta_upload);
-//display_info($arquivos,'Os arquivos');
-foreach ($arquivos as $arquivo){
-    if($arquivo != '.' && $arquivo != '..') {
-        echo '<a download href="uploads/' . $arquivo . '"><img class="img_uploads" src="uploads/' . $arquivo . '"></a>';
-    }
-}
+        <?php
+        $arquivos = scandir($pasta_upload);
+        //display_info($arquivos,'Os arquivos');
+        foreach ($arquivos as $arquivo) {
+            if ($arquivo != '.' && $arquivo != '..') {
+                echo '<a download href="uploads/' . $arquivo . '"><img class="img_uploads" src="uploads/' . $arquivo . '"></a>';
+            }
+        }
 
-?>
+        ?>
 
 
-
-</div>
-
+    </div>
 
 
 <?php

@@ -72,19 +72,22 @@ include '../todos/header.php';
 
 //Criando uma classe para lidar com um ero específico.
 
-class PessoaAutorizadaException extends Exception {
+class PessoaAutorizadaException extends Exception
+{
     public function __construct($message = "", $code = 0, Throwable $previous = null)
     {
-       $newMessage = "<br>Erro personalizado: $message<br>Código personalizado: $code<br>----<br>";
+        $newMessage = "<br>Erro personalizado: $message<br>Código personalizado: $code<br>----<br>";
         parent::__construct($newMessage, $code, $previous);
     }
 }
+
 /**
  * A função vai ver se a pessoa é a pessoa autorizada
  * @param $string
  */
-function autorizada($string){
-    if($string !== 'Adriana'){
+function autorizada($string)
+{
+    if ($string !== 'Adriana') {
         throw new PessoaAutorizadaException('Você não é a Adriana', 500);
     }
     return '<br>----<br>Yay, você é a Adriana<br>----<br>';
@@ -92,16 +95,13 @@ function autorizada($string){
 
 $pessoas = ['Paula', 'Adriana', 'João'];
 
-foreach ($pessoas as $pessoa){
+foreach ($pessoas as $pessoa) {
     try {
-    echo autorizada($pessoa);
-    } catch (PessoaAutorizadaException $e){
+        echo autorizada($pessoa);
+    } catch (PessoaAutorizadaException $e) {
         echo '<br>----<br>Deu erro: ' . $e->getMessage();
     }
 }
-
-
-
 
 
 include '../todos/footer.php';

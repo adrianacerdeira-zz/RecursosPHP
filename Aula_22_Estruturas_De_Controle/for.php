@@ -16,7 +16,6 @@ include '../todos/header.php';
 //}
 
 
-
 //Em um array
 $meu_arr = ['Adriana', 'Paula', 'Max', 'Juliana', 'Marcos'];
 //for($i = 0 ; $i < 5; $i++){
@@ -48,7 +47,7 @@ $meu_arr = ['Adriana', 'Paula', 'Max', 'Juliana', 'Marcos'];
 //unset($valor);
 
 //Sintaxe alternativa
-for($i = 0 ; $i < 5; $i++):
+for ($i = 0; $i < 5; $i++):
     echo 'Olá ' . $meu_arr[$i] . '<br>';
 endfor;
 
@@ -58,8 +57,6 @@ endforeach;
 ?>
 
 
-
-
-<?php 
-include '../todos/footer.php'; 
+<?php
+include '../todos/footer.php';
 ?>

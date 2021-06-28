@@ -8,7 +8,7 @@ session_start();
 
 //display_info($_SESSION, 'Sessão');
 //
-if(!isset($_SESSION["nome"])){
+if (!isset($_SESSION["nome"])) {
     $_SESSION["nome"] = 'Adriana';
     $_SESSION["logado"] = "Não estou logado<br>";
 } else {
@@ -31,7 +31,7 @@ display_info($_COOKIE, 'Cookie');
 
 
 ?>
-<p><a href="session_destroy.php">Destruir Sessão</a> </p>
+    <p><a href="session_destroy.php">Destruir Sessão</a></p>
 <?php
 
 include '../todos/footer.php';
