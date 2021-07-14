@@ -6,7 +6,7 @@ include '../todos/header.php';
 
 const DB_NAME = 'carros';
 const DB_USER = 'root';
-const DB_PASS = 'root';
+const DB_PASS = '';
 const HOST = 'localhost';
 const DB_TIPO = 'mysql';
 const TABLE_NAME = 'carros';

@@ -114,7 +114,7 @@ require 'todos/header_inicial.php';
                 <li><a href="Aula_54_Classes_e_Objetos_Primeira_DB/index.php" target="_blank">Aula 54 - PDO - Primeira
                         Conexão</a></li>
                 <li>Aula 57 - Select com <a href="Aula_56_CRUD_em_DB/bindValue.php" target="_blank">BindValue,
-                        BindColumn</a> e <a href="Aula_56_CRUD_em_DB/bindColumn.php" target="_blank"> BindParam </a>
+                        BindColumn</a> e <a href="Aula_56_CRUD_em_DB/bindParam.php" target="_blank"> BindParam </a>
                 </li>
 
 

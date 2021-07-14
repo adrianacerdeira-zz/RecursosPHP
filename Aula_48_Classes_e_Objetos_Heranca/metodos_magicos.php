@@ -78,7 +78,7 @@ class Pessoa
     }
 
     /**
-     * Método chamado quando tento dar um valor a um atributo não declaradp
+     * Método chamado quando tento dar um valor a um atributo não declarado
      * @param $name
      * @param $value
      */

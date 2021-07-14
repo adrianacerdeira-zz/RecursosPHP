@@ -31,7 +31,7 @@ try {
     $declaracao->bindColumn('marca', $marca);
     $declaracao->bindColumn('modelo', $modelo);
 //Pegando os dados
-    $dados = $declaracao->fetch(PDO::FETCH_BOUND);//PDO::FETCH_BOUND não é obrigatório mas é boa rática porque ele garante que todas as variáveis ligadas a colunas sejam atualizadas a cada chamada de fetch. Se vc esquecer, grandes chances que vai funcionar mesmo assim, mas é boa prática não esquecer, porque isso pode vir a mudar em versões futuras do PHP
+    $dados = $declaracao->fetch(PDO::FETCH_BOUND);//PDO::FETCH_BOUND não é obrigatório mas é boa prática porque ele garante que todas as variáveis ligadas a colunas sejam atualizadas a cada chamada de fetch. Se vc esquecer, grandes chances que vai funcionar mesmo assim, mas é boa prática não esquecer, porque isso pode vir a mudar em versões futuras do PHP
     //$dados = $declaracao->fetchAll(PDO::FETCH_ASSOC); //(Usar para mais de um registro)
 
     echo "<br>Meu carro é um: $marca $modelo";
