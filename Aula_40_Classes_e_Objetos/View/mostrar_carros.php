@@ -7,6 +7,7 @@
     <th>Dono</th>
     <th>Valor</th>
     </thead>
+    <tbody>
     <tr>
         <td>
             <?php echo $carro_view->form->marca; ?>
@@ -33,5 +34,5 @@
             ?>
         </td>
     </tr>
-
+    </tbody>
 </table>

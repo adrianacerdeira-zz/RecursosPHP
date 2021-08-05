@@ -1,8 +1,0 @@
-Estou escrevendo a partir da primeira linha.
-E agora a segunda linha.
-Sou a terceira linha
-Nova linha 1
-Nova linha 2
-Nova linha 3
-Nova linha 4
-Reabri o arquivo

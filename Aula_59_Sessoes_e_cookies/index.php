@@ -20,13 +20,13 @@ echo $_SESSION["logado"];
 ////session_destroy();
 //display_info($_SESSION, 'Sessão');
 
-display_info($_COOKIE, 'Cookie');
+//display_info($_COOKIE, 'Cookie');
 //foreach ($_COOKIE as $key => $value){
 //    setcookie($key, '', -(time()+3600));
 //}
-//display_info($_COOKIE, 'Cookie');
+display_info($_COOKIE, 'Cookie');
 //$_COOKIE['sobrenome'] = 'Cerdeira';
-//$_COOKIE['nome'] = 'Adriana Cookie 2';
+////$_COOKIE['nome'] = 'Adriana Cookie 2';
 //display_info($_COOKIE, 'Cookie 2');
 
 

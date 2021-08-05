@@ -6,7 +6,8 @@ include 'Model/ProcessarFormCarro.php';
 
 $hondaFit = new Carro(2010, 'Fit', 'Honda', 'Azul', 'Adriana', '20.000,00');
 $fordFocus = new Carro(2020, 'Focus', 'Ford', 'Vermelho', 'Marcos', '100.000,00');
-echo $hondaFit->propriedadeStatic;
+//echo $hondaFit->propriedadeStatic;
+echo $hondaFit->souStatic();
 //display_info($hondaFit, 'Var_dump do meu Objeto');
 
 //Para mostrar exemplo de propriedade criada em método

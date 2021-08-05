@@ -88,19 +88,19 @@ require 'todos/header_inicial.php';
                 </li>
                 <li><a href="Aula_40_Classes_e_Objetos/carros.php" target="_blank">Aula 46 - Processamento de
                         Formulário</a></li>
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/index.php" target="_blank">Aula 48 - Herança</a></li>
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/interface_view.php" target="_blank">Aula 49 -
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/index.php" target="_blank">Aula 47 - Herança</a></li>
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/interface_view.php" target="_blank">Aula 48 -
                         Interface</a>
                 </li>
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/abstrata_view.php" target="_blank">Aula 50 - Classe
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/abstrata_view.php" target="_blank">Aula 49 - Classe
                         Abstrata</a></li>
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/modificador_final_view.php" target="_blank">Aula 51 -
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/modificador_final_view.php" target="_blank">Aula 50 -
                         Classes
                         e métodos finais</a></li>
 
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/traits_view.php" target="_blank">Aula 51 - Traits</a>
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/traits_view.php" target="_blank">Aula 51 - Traits</a>
                 </li>
-                <li><a href="Aula_48_Classes_e_Objetos_Heranca/metodos_magicos_view.php" target="_blank">Aula 52 -
+                <li><a href="Aula_47_Classes_e_Objetos_Heranca/metodos_magicos_view.php" target="_blank">Aula 52 -
                         Métodos
                         Mágicos</a></li>
 
@@ -108,13 +108,13 @@ require 'todos/header_inicial.php';
         <li>
             <h2>Usando Bases de Dados</h2>
             <ul>
-                <li><a href="Aula_54_Classes_e_Objetos_Primeira_DB/index.php" target="_blank">Aula 53 - Primeira Base de
+                <li><a href="Aula_53_Classes_e_Objetos_Primeira_DB/index.php" target="_blank">Aula 53 - Primeira Base de
                         Dados</a>
                 </li>
-                <li><a href="Aula_54_Classes_e_Objetos_Primeira_DB/index.php" target="_blank">Aula 54 - PDO - Primeira
+                <li><a href="Aula_53_Classes_e_Objetos_Primeira_DB/index.php" target="_blank">Aula 54 - PDO - Primeira
                         Conexão</a></li>
-                <li>Aula 57 - Select com <a href="Aula_56_CRUD_em_DB/bindValue.php" target="_blank">BindValue,
-                        BindColumn</a> e <a href="Aula_56_CRUD_em_DB/bindParam.php" target="_blank"> BindParam </a>
+                <li>Aula 55 e 56 - Select com <a href="Aula_55_CRUD_em_DB/bindValue.php" target="_blank">BindValue,
+                        BindColumn</a> e <a href="Aula_55_CRUD_em_DB/bindParam.php" target="_blank"> BindParam </a>
                 </li>
 
 
@@ -125,37 +125,37 @@ require 'todos/header_inicial.php';
         <li>
             <h2>Namespaces para resolver conflitos</h2>
             <ul>
-                <li><a href="Aula_58_Namespace/index.php" target="_blank">Aula 58 - Namespace</a>
+                <li><a href="Aula_57_Namespace/index.php" target="_blank">Aula 57 - Namespace</a>
                 </li>
-                <li><a href="Aula_58_Namespace/index2.php" target="_blank">Aula 58 - Use/As</a></li>
+                <li><a href="Aula_57_Namespace/index2.php" target="_blank">Aula 57 - Use/As</a></li>
             </ul>
         </li>
         <li>
             <h2>Lidando com Erros</h2>
             <ul>
-                <li>Aula 59 - <a href="Aula_59_erros_try_catch/include.php" target="_blank">Die e Exit</a> e <a
-                            href="Aula_59_erros_try_catch/index.php" target="_blank">Try e Catch</a></li>
+                <li>Aula 58 - <a href="Aula_58_erros_try_catch/include.php" target="_blank">Die e Exit</a> e <a
+                            href="Aula_58_erros_try_catch/index.php" target="_blank">Try e Catch</a></li>
                 <li>
             </ul>
         </li>
         <li>
             <h2>Sessões e Cookies</h2>
             <ul>
-                <li><a href="Aula_60_Sessoes_e_cookies/index.php" target="_blank">Aula 60 - Sessões e Cookies</a>
+                <li><a href="Aula_59_Sessoes_e_cookies/index.php" target="_blank">Aula 59 - Sessões e Cookies</a>
                 </li>
 
-                <li><a href="Aula_60_Sessoes_e_cookies/index.php" target="_blank">Aula 60 - Destruir Sessões e Apagar
+                <li><a href="Aula_59_Sessoes_e_cookies/index.php" target="_blank">Aula 59 - Destruir Sessões e Apagar
                         Cookies</a></li>
-                <li><a href="Aula_60_Sessoes_e_cookies/gerenciar.php" target="_blank">Aula 60 - Gerenciamento de
+                <li><a href="Aula_59_Sessoes_e_cookies/gerenciar.php" target="_blank">Aula 60 - Gerenciamento de
                         Sessão</a></li>
-                <li><a href="Aula_60_Sessoes_e_cookies/gerenciar.php" target="_blank">Aula 60 - Exemplo Segurança de
+                <li><a href="Aula_59_Sessoes_e_cookies/gerenciar.php" target="_blank">Aula 60 - Exemplo Segurança de
                         Sessão</a></li>
             </ul>
         </li>
 
         <li><h2>PHP 8</h2>
             <ul>
-                <li><a href="Aula_62_PHP_8/index.php" target="_blank">Aula 62 - Novidades do PHP 8</a>
+                <li><a href="Aula_61_PHP_8/index.php" target="_blank">Aula 61 - Novidades do PHP 8</a>
                 </li>
             </ul>
         </li>
@@ -165,10 +165,10 @@ require 'todos/header_inicial.php';
             <h2>Funcionalidades Interessantes de PHP</h2>
             <ul>
 
-                <li><a href="Aula_63_Funcionalidades_PHP/escrever_ler.php" target="_blank">Aula 64 - Escrever e Ler
+                <li><a href="Aula_62_Funcionalidades_PHP/escrever_ler.php" target="_blank">Aula 62 - Escrever e Ler
                         arquivos</a>
                 </li>
-                <li><a href="Aula_63_Funcionalidades_PHP/upload.php" target="_blank">Aula 65 - Upload e Download de
+                <li><a href="Aula_62_Funcionalidades_PHP/upload.php" target="_blank">Aula 63 - Upload e Download de
                         Arquivos</a>
                 </li>
             </ul>

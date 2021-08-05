@@ -11,11 +11,13 @@ $pasta_upload = "$diretorio\uploads\\";
 
 
 if (isset($_FILES["arquivo"])) {
-    if (isset($_FILES["type"]) && isset($_FILES["size"])) {
-        if (!in_array($_FILES["type"], $tipos_permitidos)) {
+    if (isset($_FILES["arquivo"]["type"]) && isset($_FILES["arquivo"]["size"])) {
+
+        if (!in_array($_FILES["arquivo"]["type"], $tipos_permitidos)) {
             $arquivo_valido = false;
+
         }
-        if ($_FILES["size"] > $tamanho_maximo) {
+        if ($_FILES["arquivo"]["size"] > $tamanho_maximo) {
             $arquivo_valido = false;
         }
 
@@ -32,6 +34,8 @@ if (isset($_FILES["arquivo"])) {
         } else {
             echo 'Oops, deu erro.';
         }
+    } else {
+        echo 'Oops, deu erro.';
     }
 }
 

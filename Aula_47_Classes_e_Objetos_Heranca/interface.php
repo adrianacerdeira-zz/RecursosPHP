@@ -91,11 +91,13 @@ class Testando implements Herdada2
     {
         // TODO: Implement somar() method.
         echo "Oi";
+        return $a + $b;
     }
 
 
     function souHerdadaDeMultiplas()
     {
         // TODO: Implement souHerdadaDeMultiplas() method.
+        echo "Nova função<br>";
     }
 }

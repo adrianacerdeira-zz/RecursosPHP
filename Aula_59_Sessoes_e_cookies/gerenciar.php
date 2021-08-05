@@ -2,7 +2,7 @@
 include '../todos/functions.php';
 include '../todos/header.php';
 //setcookie('nome', 'Adriana Cookie', time()+3600);
-//session_id('mh8fean8ir36k26e2d9e6dvc6l');
+session_id('68o6uhgkhqs80611cb7ejadmsh');
 session_start();
 //display_info($_SESSION, 'Sessão');
 display_info($_COOKIE, 'Cookie');

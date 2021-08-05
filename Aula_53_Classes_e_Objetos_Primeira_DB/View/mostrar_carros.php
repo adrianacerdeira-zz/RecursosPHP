@@ -11,6 +11,7 @@ if ($dados->dados){
     <th>Dono</th>
     <th>Valor</th>
     </thead>
+    <tbody>
     <?php
     foreach ($dados->dados as $dado) {
 
@@ -47,5 +48,5 @@ if ($dados->dados){
 
     }
     ?>
-
+    </tbody>
 </table>
