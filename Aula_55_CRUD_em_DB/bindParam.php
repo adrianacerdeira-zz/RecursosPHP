@@ -50,7 +50,7 @@ try {
 
     echo "<br>Meu for loop<br>";
 
-    for ($id = 1; $id < 4; $id += 2) {
+    for ($id = 1; $id < 4; $id++) {
         $declaracao->execute();
         $dados = $declaracao->fetch(PDO::FETCH_BOUND);
 

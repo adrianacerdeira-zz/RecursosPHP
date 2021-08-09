@@ -5,7 +5,7 @@ include '../todos/header.php';
 
 const DB_NAME = 'carros';
 const DB_USER = 'root';
-const DB_PASS = 'root';
+const DB_PASS = '';
 const HOST = 'localhost';
 const DB_TIPO = 'mysql';
 const TABLE_NAME = 'carros';
@@ -17,13 +17,13 @@ $caminho = DB_TIPO . ':host=' . HOST . ';dbname=' . DB_NAME;
 $conexao = new PDO($caminho, DB_USER, DB_PASS);
 
 $id = 1;
-$sqlBuscaPrepared = "SELECT marca, modelo FROM carros WHERE id=:id";
-//$sqlBuscaPrepared = "SELECT marca, modelo FROM carros WHERE modelo=:modelo";
+//$sqlBuscaPrepared = "SELECT marca, modelo FROM carros WHERE id=:id";
+$sqlBuscaPrepared = "SELECT marca, modelo FROM carros WHERE modelo=:modelo";
 try {
     $declaracao = $conexao->prepare($sqlBuscaPrepared);
 
-    $declaracao->bindValue(':id', $id, PDO::PARAM_INT);
-    //$declaracao->bindValue(':modelo', 'Corolla', PDO::PARAM_STR);
+    //$declaracao->bindValue(':id', $id, PDO::PARAM_INT);
+    $declaracao->bindValue(':modelo', 'Corolla', PDO::PARAM_STR);
 
     $declaracao->execute();
 
@@ -33,6 +33,7 @@ try {
 //Pegando os dados
     $dados = $declaracao->fetch(PDO::FETCH_BOUND);//PDO::FETCH_BOUND não é obrigatório mas é boa prática porque ele garante que todas as variáveis ligadas a colunas sejam atualizadas a cada chamada de fetch. Se vc esquecer, grandes chances que vai funcionar mesmo assim, mas é boa prática não esquecer, porque isso pode vir a mudar em versões futuras do PHP
     //$dados = $declaracao->fetchAll(PDO::FETCH_ASSOC); //(Usar para mais de um registro)
+    $dados = $declaracao->fetchAll(PDO::FETCH_BOUND); //(Usar para mais de um registro) //Se eu usar o PDO::FETCH_BOUND no fetchAll ele vai me devolver um array com um booleano
 
     echo "<br>Meu carro é um: $marca $modelo";
     display_info($dados, "Da DB");
